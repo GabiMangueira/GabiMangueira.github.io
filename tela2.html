@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriela Mangueira">
+    <link href="resources/style.css" rel="stylesheet">
+    <title> Gabriela Mangueira </title>
+</head>
+
+<body style="font-family: 'Courier Prime', monospace"></body>
+
+<body class="claro">
+    <header>
+        <div class="flex-container">
+            <img id="minhafoto" src="img/minhafoto.jpg" alt="perfil">
+            <section id="inicio">
+                <h1> Gabriela Mangueira </h1>
+                <h2> Técnica em informática </h2>
+            </section>
+        </div>
+        <section class="controles">
+            <img src="img/sol.png" id="acender" width="50" height="50" />
+            <img src="img/lua.png" id="escuro" width="40" height="40" />
+        </section>
+    </header>
+
+    <main>
+        <article>
+            <nav>
+                <a href="index.html">
+                    Início
+                </a>
+                <a href="tela2.html">
+                    Experiência/Atividades
+                </a>
+            </nav>
+            <section>
+                <h3>Experiência profissional</h3>
+                <p>Bolsista no projeto de ensino - CodeLab (Março- Atualmente) - IFSP</p>
+                <p> Projeto voltado para o desenvolvimento Web, onde atualmente estamos trabalhando na construção de
+                    site de uso acadêmico. </p>
+            </section>
+            <section>
+                <h3>Atividades complementares</h3>
+                <ul>
+                    <li>Projetos escolares desenvolvidos para diferentes matérias do técnico (Site e jogo)</li>
+                    <li>Participação no evento Latin Code Week (2018, Junior Achievement)</li>
+                    <li>Participação no evento Innovation Camp (2019, Junior Achievement)</li>
+                    <li>Participação no evento Desafio TACK (2019, Junior Achievement)</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <h3> Contato</h3>
+        <p><a href="https://www.linkedin.com/in/gabriela-mangueira-23b5a7196/"><img src="img/in.png"
+                    alt="icon linkedin">gabriela-mangueira</a></p>
+        <p><img src="img/email.png" alt="icon email" />gabriela.mangueira03@gmail.com</p>
+        <p><img src="img/tel.png" alt="icon telefone" />(11)98529-9017/(11)2905-1948</p>
+    </footer>
+</body>
+
+<script src="jquery-3.5.1.min.js"> </script>
+
+<script>
+         jQuery(document).ready(function($) {
+            $('#claro').click(function() {
+               $('section').removeClass('escuro');
+               $('section').addClass('claro');
+            });
+
+            $('#escuro').click(function() {
+               $('section').removeClass('claro');
+               $('section').addClass('escuro');
+            });
+
+            $('#minhafoto').mouseenter(function() {
+               $(this).addClass('foto_com_mouse');
+               $(this).removeClass('foto_sem_mouse');
+            });
+
+            $('#minhafoto').mouseleave(function() {
+               $(this).removeClass('foto_com_mouse');
+               $(this).addClass('foto_sem_mouse');
+            });
+
+    });
+    
+</script>
+
+</html>
